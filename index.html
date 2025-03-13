@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Age calculator app</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+
+	<body>
+		<!-- Container -->
+		<main class="container" role="main">
+			<div class="content">
+				<!-- Input Date of Birth -->
+				<div class="input">
+					<!-- Day -->
+					<div>
+						<h6>Day</h6>
+						<input type="text" placeholder="DD" id="dayIn" />
+						<p class="error"></p>
+					</div>
+					<!-- Month -->
+					<div>
+						<h6>Month</h6>
+						<input type="text" placeholder="MM" id="monthIn" />
+						<p class="error"></p>
+					</div>
+					<!-- Year -->
+					<div>
+						<h6>Year</h6>
+						<input type="text" placeholder="YYYY" id="yearIn" />
+						<p class="error"></p>
+					</div>
+				</div>
+				<!-- Button -->
+				<hr />
+				<button id="calculateBtn">
+					<img src="./assets/images/icon-arrow.svg" alt="" />
+				</button>
+
+				<!-- Result -->
+				<div class="result">
+					<h1><span id="yearOut">--</span> years</h1>
+					<h1><span id="monthOut">--</span> months</h1>
+					<h1><span id="dayOut">--</span> days</h1>
+				</div>
+			</div>
+		</main>
+
+		<footer class="attribution" role="contentinfo">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://github.com/Shashikantbharti">Shashikant Bharti</a>.
+		</footer>
+
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
