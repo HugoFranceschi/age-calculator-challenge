@@ -39,30 +39,21 @@ inputYear.addEventListener("input", () => {
 });
 
 buttonCalculat.addEventListener("click", () => {
-	// let jour =
-	// 	(new Date() - new Date(inputYear.value, inputMouth.value, inputDay.value)) /
-	// 	(1000 * 60 * 60 * 24);
+	if (inputDay.value >= 1 && inputMouth.value >= 1 && inputYear.value >= 1) {
+		let jour = new Date().getDate() - inputDay.value;
 
-	let jour = new Date().getDate() - inputDay.value;
+		spanDay.textContent = Math.floor(jour);
+		console.log(Math.floor(jour));
 
-	spanDay.textContent = Math.floor(jour);
-	console.log(Math.floor(jour));
+		let mois = new Date().getMonth() + 1 - inputMouth.value;
 
-	// let mois =
-	// 	(new Date() - new Date(inputYear.value, inputMouth.value, inputDay.value)) /
-	// 	(1000 * 60 * 60 * 24);
+		spanMouth.textContent = Math.floor(mois);
+		console.log(Math.floor(mois));
 
-	let mois = new Date().getMonth() + 1 - inputMouth.value;
+		let anne = new Date().getFullYear() - inputYear.value;
 
-	spanMouth.textContent = Math.floor(mois);
-	console.log(Math.floor(mois));
-
-	let anne =
-		(new Date() - new Date(inputYear.value, inputMouth.value, inputDay.value)) /
-		(1000 * 60 * 60 * 24);
-
-	anne = anne / 365;
-
-	spanYear.textContent = Math.floor(anne);
-	console.log(Math.floor(anne));
+		spanYear.textContent = Math.floor(anne);
+		console.log(Math.floor(anne));
+	} else {
+	}
 });
